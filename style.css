@@ -58,13 +58,12 @@ html, body {
 
 
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 #main {
   transition: margin-right .5s;
   height: 100%;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -81,6 +80,7 @@ html, body {
   background-size: cover;
   position: relative;
 }
+
 
 
 h1 {
@@ -101,7 +101,6 @@ h2 {
   text-align: center;
   font-size: 2em;
   text-transform: capitalize;
-
 }
 
 
@@ -126,6 +125,8 @@ p {
   text-align: center;
   padding-top: 10px;
 }
+
+
 .buttons {
   display: inline-block;
   margin:  0;
@@ -134,22 +135,29 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.btn-lg {
-    color: black;
-    border: 1px solid #a3978c;
+.btn {
     margin: 0;
     display: inline-block;
     text-decoration:none;
 }
 
-.btn-lg:hover {
-    color: #a3978c;
+.btn:hover {
+    color: black;
+    background-color: white;
 }
 
 .btn-group {
   margin-top: 20px;
       left: 50%;
     transform: translate(-50%, -50%);
+    color: black;
+    text-decoration: none;
+    border-color: black;
+}
+
+.btn-group:hover {
+  background-color: black;
+  color: white;
 }
 
 .text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
@@ -162,10 +170,9 @@ p {
   background-size: cover;
 }
 
-
 .dog-play {
   background-image: url("https://images.unsplash.com/photo-1515410978164-a31dcea7f05e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
-  height: 400px;
+  height: 500px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -174,12 +181,8 @@ p {
   z-index: 2;
 }
 
-
 #slides {
   width: 100%;    
-}
-.carousel-inner {
-
 }
 
 .humans {
@@ -208,7 +211,7 @@ section .section-inner h2{
 }
 
 input {
-     width: 100%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -218,9 +221,83 @@ input {
 
 }
 
-
 footer {
   height:  100px;
   width: 100%;
   background-color: #a3978c;
 }
+
+/*Media screen responsive inputs*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .buttons{
+    margin-top: 20px;
+  }
+  .btn {
+    min-width: 48px;
+    min-height: 40px;
+    font-size: 1em;
+  }
+  .btn-group{
+    min-width: 48px;
+    min-height: 40px;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  h1{
+    white-space: nowrap;
+    letter-spacing: 0.2em;
+    font-size: 2em ;
+    font-weight: 100;
+    top: 20%;
+  }
+  h3{
+    white-space: nowrap;
+    font-size: 1em;
+    top: 30%;
+  }
+  hero-text {
+    display: flex;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-weight: 50%;
+    margin-top: 20px;
+  }
+  p {
+    font-weight: 0.6em;
+  }
+  label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5em;
+  }
+  input {
+    width: 70%;
+    height: 30px;
+  }
+  .indicates-required {
+    font-size: 0.5em;
+  }
+  #mc-embedded-subscribe {
+    font-size: 0.5em;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    top: 0%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
